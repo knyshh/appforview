@@ -1,0 +1,41 @@
+import { createAction } from "redux-actions";
+
+export const GET_MISSIONS = "GET_MISSIONS";
+export const GET_MISSIONS_SUCCESS = "GET_MISSIONS_SUCCESS";
+export const GET_MISSIONS_FAILURE = "GET_MISSIONS_FAILURE";
+
+export const ADD_MISSION = "ADD_MISSION";
+export const ADD_MISSION_SUCCESS = "ADD_MISSION_SUCCESS";
+export const ADD_MISSION_FAILURE = "ADD_MISSION_FAILURE";
+
+export const UPDATE_MISSION = "UPDATE_MISSION";
+export const UPDATE_MISSION_SUCCESS = "UPDATE_MISSION_SUCCESS";
+export const UPDATE_MISSION_FAILURE = "UPDATE_MISSION_FAILURE";
+
+export const NOTIFY_DOCTORS = "NOTIFY_DOCTORS";
+export const NOTIFY_DOCTORS_SUCCESS = "NOTIFY_DOCTORS_SUCCESS";
+export const NOTIFY_DOCTORS_FAILURE = "NOTIFY_DOCTORS_FAILURE";
+
+export const REGISTER_DOCTOR = "REGISTER_DOCTOR";
+export const REGISTER_DOCTOR_SUCCESS = "REGISTER_DOCTOR_SUCCESS";
+export const REGISTER_DOCTOR_FAILURE = "REGISTER_DOCTOR_FAILURE";
+
+export const GET_MISSION_SCHEDULE = "GET_MISSION_SCHEDULE";
+export const GET_MISSION_SCHEDULE_SUCCESS = "GET_MISSION_SCHEDULE_SUCCESS";
+export const GET_MISSION_SCHEDULE_FAILURE = "GET_MISSION_SCHEDULE_FAILURE";
+
+export const ADD_MISSION_VISIT = "ADD_MISSION_VISIT";
+export const ADD_MISSION_VISIT_SUCCESS = "ADD_MISSION_VISIT_SUCCESS";
+export const ADD_MISSION_VISIT_FAILURE = "ADD_MISSION_VISIT_FAILURE";
+
+export const UPDATE_MISSION_VISIT = "UPDATE_MISSION_VISIT";
+export const UPDATE_MISSION_VISIT_SUCCESS = "UPDATE_MISSION_VISIT_SUCCESS";
+export const UPDATE_MISSION_VISIT_FAILURE = "UPDATE_MISSION_VISIT_FAILURE";
+
+export const getMissionsAction = createAction(GET_MISSIONS);
+export const addMissionAction = createAction(ADD_MISSION);
+export const updateMissionAction = createAction(UPDATE_MISSION);
+export const notifyDoctorsAction = createAction(NOTIFY_DOCTORS);
+export const registerDoctorAction = createAction(REGISTER_DOCTOR);
+export const addMissionVisitAction = createAction(ADD_MISSION_VISIT);
+export const updateMissionVisitAction = createAction(UPDATE_MISSION_VISIT);

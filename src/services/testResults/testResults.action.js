@@ -1,0 +1,19 @@
+import { createAction } from "redux-actions";
+
+export const UPLOAD_TEST_RESULT = "UPLOAD_TEST_RESULT";
+export const UPLOAD_TEST_RESULT_SUCCESS = "UPLOAD_TEST_RESULT_SUCCESS";
+export const UPLOAD_TEST_RESULT_FAILURE = "UPLOAD_TEST_RESULT_FAILURE";
+
+export const CLEAR_TEST_RESULTS = "CLEAR_TEST_RESULTS";
+
+export const REMOVE_TEST_RESULT = "REMOVE_TEST_RESULT";
+export const REMOVE_TEST_RESULT_SUCCESS = "REMOVE_TEST_RESULT_SUCCESS";
+export const REMOVE_TEST_RESULT_FAILURE = "REMOVE_TEST_RESULT_FAILURE";
+
+export const SAVE_TEST_RESULTS = "SAVE_TEST_RESULTS";
+export const SAVE_TEST_RESULTS_SUCCESS = "SAVE_TEST_RESULTS_SUCCESS";
+export const SAVE_TEST_RESULTS_FAILURE = "SAVE_TEST_RESULTS_FAILURE";
+
+export const uploadTestResultAction = createAction(UPLOAD_TEST_RESULT);
+export const removeTestResultAction = createAction(REMOVE_TEST_RESULT);
+export const saveTestResultsAction = createAction(SAVE_TEST_RESULTS);

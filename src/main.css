@@ -1,0 +1,468 @@
+@import '~antd/dist/antd.css';
+
+/*reset http://meyerweb.com/eric/tools/css/reset/*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+address {
+    font-style: normal;
+}
+img {
+    max-width: 100%;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:focus,
+button:focus,
+video:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+a, button {
+    transition: all 0.3s ease-in;
+}
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('./assets/fonts/Avenir-Black.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('./assets/fonts/Avenir-Book.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Heavy';
+    src: url('./assets/fonts/Avenir-Heavy.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('./assets/fonts/Avenir-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('./assets/fonts/Avenir-Roman.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('./assets/fonts/Avenir-Black.woff2') format('woff2'),
+    url('./assets/fonts/Avenir-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('./assets/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('./assets/fonts/montserrat-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*variables*/
+:root {
+    /*fonts*/
+    --fontAvenirMedium: 'Avenir-Medium', sans-serif;
+    --fontAvenirRoman: 'Avenir-Roman', sans-serif;
+    --fontAvenirBook: 'Avenir-Book', sans-serif;
+    --fontAvenirHeavy: 'Avenir-Heavy', sans-serif;
+    --fontAvenirBlack: 'Avenir-Black', sans-serif;
+    --fontMonstseratBold: 'montserratbold', sans-serif;
+    --fontMonstseratRegular: 'montserratregular', sans-serif;
+
+    /*colors*/
+    --white: #fff;
+    --mainBg: #f7faff;
+    --defaultColor: #000000;
+    --blue: #3879bb;
+    --gray: #62656c;
+
+    --borderInput:  #acc9d8;
+    --placeholder:  #BFBFBF;
+
+    /*gradients*/
+    --gradientBlue: linear-gradient(to left, #37a0f7, #3879bb);
+    --gradientBlueHover: linear-gradient(to left, #2578bd, #3879bb);
+    --gradientGreen: linear-gradient(to left, #6abc7b, #499559);
+    --gradientRed:   linear-gradient(to bottom, #ee6c6c, #e13434);
+    --red: #fc6060;
+
+}
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    min-height: 100%;
+    position: relative;
+    margin-top: 0 !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+    background: var(--mainBg);
+}
+
+body {
+    font-family: var(--fontAvenirBook);
+    background: var(--mainBg);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.ant-input:hover {
+    border-color: var(--borderInput);
+    box-shadow: none;
+}
+.ant-input:focus, .ant-input-focused {
+    border-color: var(--borderInput);
+    box-shadow: none;
+}
+.ant-input-affix-wrapper {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.ant-input-affix-wrapper-focused input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.ant-select-selection-placeholder {
+    color: var(--placeholder);
+    opacity: 1;
+}
+
+.ant-input::placeholder {
+
+}
+
+.react-tel-input .form-control {
+    border: 1px solid var(--borderInput);
+    background-color: var(--white);
+    position: relative;
+    padding: 13px 20px 11px 80px;
+    color: var(--defaultColor);
+    height: 48px;
+    width: 100%;
+    line-height: 48px;
+    border-radius: 12px;
+    font-family: var(--fontAvenirMedium);
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.1);
+}
+
+.react-tel-input .form-control.error {
+    border: 1px solid var(--red);
+}
+
+
+.react-tel-input .form-control::placeholder {
+    color: var(--placeholder);
+    opacity: 1;
+}
+
+.react-tel-input .flag-dropdown {
+    position: absolute;
+    width: 65px;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--borderInput);
+    border-radius: 12px 0 0 12px;
+}
+.react-tel-input .error + .flag-dropdown {
+    border: 1px solid var(--red);
+}
+.react-tel-input .flag-dropdown.open {
+     z-index: 2;
+     background: #fff;
+     border-radius: 12px 0 0 12px;
+ }
+
+.react-tel-input .flag-dropdown.open .selected-flag  {
+    border-radius: 12px 0 0 12px;
+}
+.react-tel-input .selected-flag {
+    width: 60px;
+    padding: 0;
+    height: 45px;
+    background: transparent;
+    border-radius: 12px 0 0 12px;
+}
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+    background: transparent;
+}
+.react-tel-input .selected-flag .arrow {
+    left: 25px;
+
+}
+.react-tel-input .flag-dropdown {
+    height: 48px;
+}
+.react-tel-input .flag {
+    left: 20px;
+}
+
+.userDropdown {
+    margin-top: 20px;
+    min-height: 60px;
+    border-radius: 12px;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+.ant-select-dropdown {
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin-top: 5px;
+}
+
+.ant-select-item {
+    font-family: var(--fontAvenirMedium);
+    font-size: 14px;
+}
+.ant-select-item:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.userDropdown .ant-menu-vertical {
+    border-radius: 14px;
+    padding: 15px 0;
+}
+.userDropdown .ant-menu {
+    border-radius: 12px;
+    padding: 13px 0;
+}
+.userDropdown .ant-menu .ant-menu-item,
+.userDropdown .ant-menu .ant-menu-item a {
+    font-family: var(--fontAvenirMedium);
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--blue);
+    text-transform: uppercase;
+    background: #fff;
+    margin: 0;
+    transition: none;
+
+}
+.userDropdown .ant-menu .ant-menu-item:hover,
+.userDropdown .ant-menu .ant-menu-item:hover a{
+    background: var(--blue);
+    color: #fff;
+    transition: none;
+}
+
+.ant-modal-body .control-field .ant-input,
+.ant-modal-body .ant-select,
+.ant-modal-body .ant-picker {
+    /*border: none !important;*/
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1) !important;
+}
+h1 {
+    display: inline-block;
+    width: 100%;
+    font-family: var(--fontAvenirHeavy);
+    font-size: 36px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #131415;
+    margin-bottom: 20px;
+}
+
+h2 {
+    display: inline-block;
+    width: 100%;
+    font-family: var(--fontAvenirHeavy);
+    font-size: 28px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #131415;
+    padding: 0 0 20px;
+}
+
+
+h3 {
+    display: inline-block;
+    width: 100%;
+    font-family: var(--fontAvenirMedium);
+    font-size: 24px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #131415;
+    padding: 0 0 20px;
+}
+ h4, h5 {
+     display: inline-block;
+     width: 100%;
+    font-family: var(--fontAvenirMedium);
+    font-size: 20px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #131415;
+    padding: 0 0 20px;
+}
+
+ p {
+     padding: 0 5px;
+ }
+
+ strong, em {
+     font-family: var(--fontAvenirHeavy);
+ }
+
+.ant-picker-today-btn {
+    color: var(--blue);
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+    background: var(--blue);
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+    border: 1px solid var(--blue);
+}
+
+.ant-picker-ok .ant-btn-primary {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+.ant-picker-now-btn {
+   color:  var(--blue);
+}
+.ant-spin.ant-spin-spinning {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.55);
+    z-index: 9999;
+}
+.ant-spin-spinning .ant-spin-dot {
+    top: 50%;
+}
+
+.ant-picker-now{
+    display: none !important;
+}
+
+b {
+    font-family: var(--fontMonstseratBold);
+}
+
+.ant-picker-time-panel-cell.ant-picker-time-panel-cell-disabled{
+    display: none;
+}
+
+.ant-picker-time-panel .ant-picker-time-panel-column:last-child{
+    display: none;
+}

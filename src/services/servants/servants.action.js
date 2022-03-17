@@ -1,0 +1,30 @@
+import { createAction } from "redux-actions";
+
+export const GET_SERVANTS = "GET_SERVANTS";
+export const GET_SERVANTS_SUCCESS = "GET_SERVANTS_SUCCESS";
+export const GET_SERVANTS_FAILURE = "GET_SERVANTS_FAILURE";
+
+export const GET_SERVANT = "GET_SERVANT";
+export const GET_SERVANT_SUCCESS = "GET_SERVANT_SUCCESS";
+export const GET_SERVANT_FAILURE = "GET_SERVANT_FAILURE";
+
+export const VERIFY_SERVANT = "VERIFY_SERVANT";
+export const VERIFY_SERVANT_SUCCESS = "VERIFY_SERVANT_SUCCESS";
+export const VERIFY_SERVANT_FAILURE = "VERIFY_SERVANT_FAILURE";
+
+export const SAVE_SERVANT = "SAVE_SERVANT";
+export const SAVE_SERVANT_SUCCESS = "SAVE_SERVANT_SUCCESS";
+export const SAVE_SERVANT_FAILURE = "SAVE_SERVANT_FAILURE";
+
+export const CREATE_SERVANT = "CREATE_SERVANT";
+export const CREATE_SERVANT_SUCCESS = "CREATE_SERVANT_SUCCESS";
+export const CREATE_SERVANT_FAILURE = "CREATE_SERVANT_FAILURE";
+
+export const GET_SERVANTS_COUNT = "GET_SERVANTS_COUNT";
+export const GET_SERVANTS_COUNT_SUCCESS = "GET_SERVANTS_COUNT_SUCCESS";
+export const GET_SERVANTS_COUNT_FAILURE = "GET_SERVANTS_COUNT_FAILURE";
+
+export const getServantsAction = createAction(GET_SERVANTS);
+export const verifyServantAction = createAction(VERIFY_SERVANT);
+export const saveServantAction = createAction(SAVE_SERVANT);
+export const createServantAction = createAction(CREATE_SERVANT);

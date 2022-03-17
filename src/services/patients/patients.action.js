@@ -1,0 +1,30 @@
+import { createAction } from "redux-actions";
+
+export const GET_PATIENTS = "GET_PATIENTS";
+export const GET_PATIENTS_SUCCESS = "GET_PATIENTS_SUCCESS";
+export const GET_PATIENTS_FAILURE = "GET_PATIENTS_FAILURE";
+
+export const GET_PATIENT = "GET_PATIENT";
+export const GET_PATIENT_SUCCESS = "GET_PATIENT_SUCCESS";
+export const GET_PATIENT_FAILURE = "GET_PATIENT_FAILURE";
+
+export const GET_PATIENTS_COUNT = "GET_PATIENTS_COUNT";
+export const GET_PATIENTS_COUNT_SUCCESS = "GET_PATIENTS_COUNT_SUCCESS";
+export const GET_PATIENTS_COUNT_FAILURE = "GET_PATIENTS_COUNT_FAILURE";
+
+export const SAVE_PATIENT = "SAVE_PATIENT";
+export const SAVE_PATIENT_SUCCESS = "SAVE_PATIENT_SUCCESS";
+export const SAVE_PATIENT_FAILURE = "SAVE_PATIENT_FAILURE";
+
+export const SEARCH_PATIENTS = "SEARCH_PATIENT";
+export const SEARCH_PATIENTS_SUCCESS = "SEARCH_PATIENT_SUCCESS";
+export const SEARCH_PATIENTS_FAILURE = "SEARCH_PATIENT_FAILURE";
+
+export const CREATE_PATIENT = "CREATE_PATIENT";
+export const CREATE_PATIENT_SUCCESS = "CREATE_PATIENT_SUCCESS";
+export const CREATE_PATIENT_FAILURE = "CREATE_PATIENT_FAILURE";
+
+export const getPatientsAction = createAction(GET_PATIENTS);
+export const savePatientAction = createAction(SAVE_PATIENT);
+export const createPatientAction = createAction(CREATE_PATIENT);
+export const searchPatientsAction = createAction(SEARCH_PATIENTS);

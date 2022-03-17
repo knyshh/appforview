@@ -1,0 +1,26 @@
+import { createAction } from "redux-actions";
+
+export const UPLOAD_DOCUMENT = "UPLOAD_DOCUMENT";
+export const UPLOAD_DOCUMENT_SUCCESS = "UPLOAD_DOCUMENT_SUCCESS";
+export const UPLOAD_DOCUMENT_FAILURE = "UPLOAD_DOCUMENT_FAILURE";
+
+export const CLEAR_DOCUMENTS = "CLEAR_DOCUMENTS";
+export const CLEAR_DOCUMENTS_SUCCESS = "CLEAR_DOCUMENTS_SUCCESS";
+export const CLEAR_DOCUMENTS_FAILURE = "CLEAR_DOCUMENTS_FAILURE";
+
+export const REMOVE_DOCUMENT = "REMOVE_DOCUMENT";
+export const REMOVE_DOCUMENT_SUCCESS = "REMOVE_DOCUMENT_SUCCESS";
+export const REMOVE_DOCUMENT_FAILURE = "REMOVE_DOCUMENT_FAILURE";
+
+export const DOCUMENTS_UPLOAD = "DOCUMENTS_UPLOAD";
+export const DOCUMENTS_UPLOAD_SUCCESS = "DOCUMENTS_UPLOAD_SUCCESS";
+export const DOCUMENTS_UPLOAD_FAILURE = "DOCUMENTS_UPLOAD_FAILURE";
+
+export const SET_DOCUMENTS = "SET_DOCUMENTS";
+export const SET_DOCUMENTS_SUCCESS = "SET_DOCUMENTS_SUCCESS";
+export const SET_DOCUMENTS_FAILURE = "SET_DOCUMENTS_FAILURE";
+
+export const uploadDocumentAction = createAction(UPLOAD_DOCUMENT);
+export const clearDocumentsAction = createAction(CLEAR_DOCUMENTS);
+export const removeDocumentAction = createAction(REMOVE_DOCUMENT);
+export const setDocumentsAction = createAction(SET_DOCUMENTS);

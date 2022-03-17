@@ -1,0 +1,3 @@
+export const START_LOADER = "START_LOADER";
+export const FINISH_LOADER = "FINISH_LOADER";
+export const SET_LOADER_STATUS = "SET_LOADER_STATUS";
